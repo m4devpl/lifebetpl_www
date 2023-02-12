@@ -48,7 +48,7 @@
                 LOGOWANIE
             </h6>
             <hr width="100%" style="border: 2px solid #dcdcdc;border-radius:2px;">
-            // TODO CM a-href
+             <!-- TODO CM a-href -->
             <a href="//fb.com/" class="shadow-sm">
                 <i class="fa-brands fa-facebook-f"></i>
                 Facebook
