@@ -6,6 +6,8 @@
     include_once "lb_conn.php";
 
     $lang = 'PL';
+    // $baseurl = '//lifebet.pl/';
+    $baseurl = '//localhost/lifebetpl_www/';
     $dbconn;
     $dbconn_status;
     $www_index_windowtitle;
@@ -79,10 +81,24 @@
         }
     }
 
+    function CheckUserLoginState() {
+        global $baseurl;
+
+        if (isset($_SESSION['user_loginState']) && $_SESSION['user_loginState'] = true) {
+            Header('Location: '.$baseurl);
+            exit();
+        } else {
+            Header('Location: '.$baseurl.'u/login/');
+            exit();
+        }
+    }
+
     function RedirectError($err) {
+        global $baseurl;
+
         DisconnectFromDB();
         $_SESSION['e'] = $err;
-        Header('Location: e.php');
+        Header('Location: '.$baseurl.'e.php');
         exit();
     }
 ?>
