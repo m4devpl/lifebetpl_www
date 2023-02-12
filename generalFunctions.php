@@ -87,9 +87,6 @@
         if (isset($_SESSION['user_loginState']) && $_SESSION['user_loginState'] = true) {
             Header('Location: '.$baseurl);
             exit();
-        } else {
-            Header('Location: '.$baseurl.'u/login/');
-            exit();
         }
     }
 
